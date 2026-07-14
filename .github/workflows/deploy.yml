@@ -1,0 +1,50 @@
+name: Deploy to deploy branch
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build deploy payload from main
+        run: |
+          # Snapshot the site files, excluding dev-only files
+          mkdir /tmp/payload
+          rsync -a --exclude='.git' \
+                   --exclude='.github' \
+                   --exclude='.gitignore' \
+                   --exclude='*.md' \
+                   --exclude='admin/config.php' \
+                   --exclude='admin/emails.json' \
+                   --exclude='admin/otp-debug.log' \
+                   ./ /tmp/payload/
+
+      - name: Commit to deploy branch (linear, fast-forwardable)
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          # Check out the existing deploy branch so history stays linear.
+          # cPanel's "Update from Remote" only fast-forwards, so we must NOT
+          # rewrite history (no orphan, no force push).
+          if git ls-remote --exit-code --heads origin deploy; then
+            git fetch origin deploy
+            git checkout -B deploy origin/deploy
+          else
+            git checkout --orphan deploy
+            git rm -rf . >/dev/null 2>&1 || true
+          fi
+          # Replace tracked files with the fresh payload (removes deleted files too)
+          rsync -a --delete --exclude='.git' /tmp/payload/ ./
+          git add -A
+          git commit -m "Deploy from main @ ${{ github.sha }}" || echo "No changes to deploy"
+          git push origin deploy

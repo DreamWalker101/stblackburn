@@ -1,0 +1,10 @@
+# Admin IP whitelist — uncomment and set your IP once the site is live.
+# <RequireAny>
+#   Require ip YOUR_OFFICE_IP_HERE
+#   Require ip YOUR_HOME_IP_HERE
+# </RequireAny>
+
+# Deny direct PHP file access from outside admin (belt-and-suspenders)
+<Files "config.php">
+  Require all denied
+</Files>

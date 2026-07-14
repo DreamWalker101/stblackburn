@@ -1,0 +1,58 @@
+/* Search results  CSS */
+.search-results .blog__standard-post.type-product {
+    max-width: 770px;
+}
+.search-results .blog__standard-post.type-product .blog__standard-content .post-text,
+.search-results .blog__standard-post.type-product .blog__standard-content .post-text p {
+    margin: 5px 0 0;
+}
+.search-results .blog__standard-post.type-product .blog-content:not(.blog-details-content) .post-text {
+    margin: 0 0;
+}
+.search-results .blog__standard-post.type-product .blog-content .post-text p {
+    margin: 0 0;
+}
+.search-results .blog__standard-post.type-product .blog-content .title {
+    margin-bottom: 15px;
+}
+.mc4wp-alert {
+    margin: 20px 0 0;
+    text-align: center;
+}
+.mc4wp-alert p {
+    margin: 0 0;
+}
+.mc4wp-success p {
+    color: green;
+}
+
+/* Elementor Custom CSS */
+.instructor-courses-area .slick-list,
+.courses-slider-active .slick-list {
+    margin: 0;
+    padding: 0;
+}
+
+/* Elementor Responsive */
+@media (max-width: 1800px) {
+
+}
+
+@media (max-width: 1500px) {
+
+}
+
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 991.98px){
+.eduvalt-related-course .section__title-wrap .tg-button-wrap {
+    margin: 30px 0 0;
+}
+
+}
+
+@media (max-width: 767.98px) {
+
+}
