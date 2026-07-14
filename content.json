@@ -1,0 +1,72 @@
+{
+  "global": {
+    "phoneDisplay": "9878 8268",
+    "phone": "(03) 9878 8268",
+    "email": "office@stblackburn.catholic.edu.au",
+    "enrolmentEmail": "office@stblackburn.catholic.edu.au",
+    "address": "67 Central Road, Blackburn, VIC 3130",
+    "addressShort": "67 Central Road, Blackburn, VIC 3130",
+    "facebookUrl": "https://www.facebook.com/sttablackburn",
+    "instagramUrl": "https://www.instagram.com/stthomasblackburn/",
+    "officeHours": "Monday to Friday · 8:30am – 4:00pm",
+    "footerTagline": "A welcoming Catholic community nurturing young minds and building bright futures."
+  },
+  "pages": {
+    "home": {
+      "s0": "Welcome to",
+      "s1": "St Thomas",
+      "s2": "the Apostle School",
+      "s3": "About",
+      "s4": "St Thomas the Apostle",
+      "s5": "Our School Vision",
+      "s6": "St Thomas' Learning Journey",
+      "s7": "Take a Virtual Tour",
+      "s8": "Get in touch with",
+      "s9": "Acknowledgement of the Land",
+      "s10": "Child Safety Statement"
+    },
+    "ourSchool": {
+      "s0": "Our  School",
+      "s1": "Our Principal",
+      "s2": "Vision Statement",
+      "s3": "Partnerships",
+      "s4": "Alumni - Past Students of St Thomas",
+      "s5": "Xavier O’Neil",
+      "s6": "AFL West Coast Eagles",
+      "s7": "Tristan Devers",
+      "s8": "NBL Basketballer\nAustralian Representative",
+      "s9": "Elizabeth O’Connor",
+      "s10": "Australian Open Top Gun Ballgirl 2026",
+      "s11": "Danielle Hamilton",
+      "s12": "Emmaus valedictorian",
+      "s13": "Suite"
+    },
+    "curriculum": {
+      "s0": "St Thomas' Curriculum"
+    },
+    "learningJourney": {
+      "s0": "St Thomas' Learning Journey",
+      "s1": "Student Leadership"
+    },
+    "community": {
+      "s0": "Community"
+    },
+    "enrolment": {
+      "s0": "Enrolment Information",
+      "s1": "Book a Tour Form",
+      "s2": "Take a Virtual Tour",
+      "s3": "Transition Programs"
+    },
+    "contact": {
+      "s0": "Contact",
+      "s1": "Contact the",
+      "s2": "School",
+      "s3": "Location and",
+      "s4": "Address"
+    }
+  },
+  "contact": {
+    "mapEmbedUrl": ""
+  },
+  "imageMap": []
+}
